@@ -1,11 +1,14 @@
-import { Canvas } from "./Components/Body"
+import React, { useEffect, useRef } from "react"
+import { Canvas } from "./Components/Body";
+import {Fab} from "./Components/Fabric"
 function App() {
-
   return (
-    <>
-    <Canvas />
-    </>
-  )
+    <div> 
+      <br /> <br />
+      <Canvas/>
+      {/* <Fab/> */}
+    </div>
+  );
 }
 
-export default App
+export default App;
