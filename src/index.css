@@ -38,7 +38,7 @@ body{
   height: 200px; /* Allow dynamic height */
   width: 200px; /* Slightly wider for better spacing */
   position: absolute;
-  bottom: 23pc;
+  bottom: 10pc;
   left: 0%;
   right: 0%;
   margin-left: auto;
