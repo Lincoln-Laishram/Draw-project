@@ -3,15 +3,24 @@ body{
   padding: 0;
   box-sizing: border-box;
 }
-.screen{
+.container{
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+/* .screen{
   border: 1px solid black;
   display: flex;
-}
+} */
 .ToolContainer {
-  box-shadow: 0px 0px 4px 1px black;
-  position: absolute;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.715);
   z-index: 1;
-  background-color: rgb(235, 238, 241);
+  background-color: rgba(235, 238, 241, 0.504);
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -20,16 +29,16 @@ body{
   margin-right: auto;
   border-radius: 12px;
   position: relative;
-  top: -60px;
+  transition: transform 0.3s ease;
 }
 .SelectShape {
-  background: rgba(248, 245, 245, 0.963); /* Transparent white for glass effect */
+  background: rgba(248, 245, 245, 0.848); /* Transparent white for glass effect */
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.475); /* Subtle shadow for depth */
-  height: auto; /* Allow dynamic height */
+  height: 200px; /* Allow dynamic height */
   width: 200px; /* Slightly wider for better spacing */
   position: absolute;
-  top: 250px;
+  bottom: 23pc;
   left: 0%;
   right: 0%;
   margin-left: auto;
@@ -56,33 +65,6 @@ body{
   transform: scale(1.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-.red, .blue, .green, .yellow{
-  height: 20px;
-  width: 20px;;
-}
-
-/* Buttons with color names */
-.SelectShape button.red {
-  background-color: red;
-  border: 1px solid black;
-}
-
-.SelectShape button.blue {
-  background-color: blue;
-  border: 1px solid black;
-}
-
-.SelectShape button.green {
-  background-color: green;
-  border: 1px solid black;
-}
-
-.SelectShape button.yellow {
-  background-color: yellow;
-  border: 1px solid black;
-}
-
 /* Range Input Styles */
 .SelectShape input[type="range"] {
   appearance: none;
@@ -126,10 +108,69 @@ body{
 .SelectShape input[type="color"]:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-
 .canvasBody{
-  border: 1px solid rgb(171, 169, 169); 
+  position: relative;
+  margin-top: 2pc;
+  outline: 2pc solid rgba(7, 7, 7, 0.945);
   border-radius: 10px;
-  box-shadow: 1px 1px 6px 1px rgba(105, 104, 104, 0.356);
+  overflow: hidden;
 }
+.ipadBtn{
+  border: 2px solid white;
+  background-color: transparent;
+  position: relative;
+  top: -6px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+@media (max-width: 481px) {
+  /* Styles for mobile devices */
+  .ToolContainer {
+    width: 250px; /* Slightly wider for mobile */
+    margin: 10px; /* Adjust margin for spacing */
+  }
+  
+  .SelectShape {
+    width: 200px; /* Slightly wider for mobile */
+    padding: 10px; /* Less padding for better spacing */
+    border: 1px solid black;
+    position:absolute;
+    left: 0;
+    right: 0;
+    bottom: 10pc;
+  }
+
+  .SelectShape button {
+    padding: 5px; /* Adjust button padding */
+    font-size: medium; /* Slightly smaller font size */
+  }
+
+  .SelectShape input[type="range"] {
+    width: 60%; /* Full width for better usability */
+  }
+
+  .SelectShape input[type="color"] {
+    width: 80px; /* Adjust color input width */
+    height: 30px; /* Adjust height for better fit */
+  }
+  .SelectShape input[type="range"]::-webkit-slider-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+  }
+  .ipadBtn {
+    height: 20px; /* Smaller button size */
+    width: 20px; /* Smaller button size */
+    top: -50px; /* Adjust position for smaller button size */
+    background-color: white;
+    border: 4px solid #000;
+  }
+  .container{
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
 
