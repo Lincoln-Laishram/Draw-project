@@ -18,7 +18,6 @@ interface ToolsProps {
 export const Tools: React.FC<ToolsProps> = ({ canvas, pen, penColor, penWidth, changeWidth, onColorChange, eraser }) => {
   const [shapes, setShapes] = useState("none");
   const [tool, setTool] = useState(-50)
-  const [color, setColor] = useState("none")
   const SelectShape = () => {
     setShapes((prevShape) => (prevShape === "none" ? "block" : "none"))
   }

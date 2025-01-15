@@ -7,7 +7,6 @@ export const Canvas = () => {
   const [canvas, setCanvas] = useState<fabric.Canvas | null>(null);
   const [lineColor, setLineColor] = useState("black");
   const [lineWidth, setLineWidth] = useState(5);
-  const [currentTool, setCurrentTool] = useState("pen");
 
   useEffect(() => {
     if (canvasRef.current) {
@@ -125,7 +124,6 @@ export const Canvas = () => {
       canvas.isDrawingMode = true;
       canvas.freeDrawingBrush.color = "white";
       canvas.freeDrawingBrush.width = 30;
-      setCurrentTool("eraser");
     }
   };
 
